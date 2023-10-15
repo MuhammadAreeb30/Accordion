@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: #fffef2;
+}
+
+.accordion {
+    width: 50%;
+    margin: 200px auto;
+}
+
+.item {
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.m-head {
+    display: flex;
+    align-items: center;
+}
+
+.m-head p {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 24px;
+    padding-left: 30px;
+}
+
+.icon {
+    font-size: 20px;
+    color: #202bff;
+}
+
+.main-box {
+    margin-top: 50px;
+    display: none;
+}
+
+.main-box p {
+    font-size: 17px;
+    line-height: 1.4;
+    color: rgb(71, 71, 71);
+    letter-spacing: 0.5;
+}
+
+.main-box ul {
+    margin-top: 12px;
+    margin-left: 16px;
+    font-size: 15px;
+    line-height: 1.4;
+    color: rgb(71, 71, 71);
+    letter-spacing: 0.5;
+}
+
+.main-box ul li {
+    margin-bottom: 8px;
+}
+
+.active .main-box {
+    transition: all 0.3s linear;
+    display: block;
+}
+
+.active {
+    position: relative;
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    border: 2px solid #202bff;
+    border-radius: 5px;
+    animation: borderLine 1s linear forwards;
+}
+
+@keyframes borderLine {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 99.7%;
+    }
+}
+
+.closeIcon {
+    display: none;
+}
+
+.icon-hidden {
+    display: none;
+}
+
+.icon-show {
+    display: block;
+}
